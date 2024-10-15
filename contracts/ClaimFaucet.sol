@@ -27,7 +27,7 @@ contract ClaimFaucet is DltToken{
 
             User storage currentUser = users[msg.sender];
 
-            require(currentUser.lastClaimedTime + 1 days >= block.timestamp, "Baba come back in 24 hours");
+            require(currentUser.lastClaimedTime + 1 days <= block.timestamp, "Baba come back in 24 hours");
 
             currentUser.lastClaimedTime = block.timestamp;
             currentUser.totalClaimed += CLAIMABLE_AMOUNT;
