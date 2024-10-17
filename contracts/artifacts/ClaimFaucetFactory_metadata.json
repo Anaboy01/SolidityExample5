@@ -1,0 +1,218 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_claimfaucet",
+						"type": "address"
+					}
+				],
+				"name": "claimFaucetFromContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					}
+				],
+				"name": "deployClaimFaucet",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "contractAddress_",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllContractDeployed",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "deployer",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "deployedContract",
+								"type": "address"
+							}
+						],
+						"internalType": "struct ClaimFaucetFactory.DeployedContractInfo[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_claimfaucet",
+						"type": "address"
+					}
+				],
+				"name": "getInfoFromContract",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLengthOfDeployedContracts",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getUserDeployedContractByIndex",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "deployer_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "deployedContract_",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getUserDeployedContracts",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "deployer",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "deployedContract",
+								"type": "address"
+							}
+						],
+						"internalType": "struct ClaimFaucetFactory.DeployedContractInfo[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ClaimFaucetFactory.sol": "ClaimFaucetFactory"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ClaimFaucet.sol": {
+			"keccak256": "0x3128461c6b2b63bd65a24b21e9e7cff558d87c82a18ff692732cd581abf0282d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1a6f9af4d737d8d79aaa37843f6d48cfb22f9ef7fe9802bd8d2e9cc69a4a077f",
+				"dweb:/ipfs/QmUgvbkd1V8FXskxS4h6Xyv84QEmpEsQP5mFxxdvkYziFE"
+			]
+		},
+		"contracts/ClaimFaucetFactory.sol": {
+			"keccak256": "0x498d5d7039cb95b55918660572a2ffd8445fff4ac1ada7e70c2ac648c9a6e754",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://854a5272a911daf5983f932cc15ba0c2fe792e7da5dbdad2ca6af3ce40fff158",
+				"dweb:/ipfs/QmVYaHo415biU3k4qSKzfVRaejUjrLZyXXYxjKveWGKKpU"
+			]
+		},
+		"contracts/DltToken.sol": {
+			"keccak256": "0xd42721541e6db172170f5e90c1e6e11c2113bd298db595400795dd6c676bc29c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f846ee529ec6761de661a1ad676d7aa26d8dfd88f68515ea26a1d043a7ace6a4",
+				"dweb:/ipfs/Qmci4hkS1VVtU2gLbxgcWYPUTNQPmvNwU91aWqA26zPeJT"
+			]
+		},
+		"contracts/IERC20.sol": {
+			"keccak256": "0x5b0dcf0b45402cf08e87fca033d70f9b3f0d371d57ac16abffa7be1f199d444a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://58992392dfe2257d4636ff5eca6fb22e535c385ad81f6380d32e8f1e06d3e676",
+				"dweb:/ipfs/QmUM4UUD6HZujZeT8TW3gTZPn67v7CE8BNFETc3j4VyTU9"
+			]
+		}
+	},
+	"version": 1
+}
