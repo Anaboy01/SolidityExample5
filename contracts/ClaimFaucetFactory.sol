@@ -61,7 +61,13 @@ contract ClaimFaucetFactory{
 
     function claimFaucetFromContract(address _claimfaucet) external{
       
-        IERC20(_claimfaucet).clainmToken();
+        IERC20(_claimfaucet).clainmToken(msg.sender);
+    }
+
+    function getBalanceOfAnAddress ( address _claimfaucet) external view returns (uint256){
+        uint256 userBal = IERC20(_claimfaucet).balanceOf(msg.sender);
+
+        return userBal;
     }
 
   

@@ -7,5 +7,7 @@ interface IERC20 {
 
     function getSymbol() external view returns (string memory);
 
-    function clainmToken() external ;
+    function clainmToken(address _address) external ;
+
+    function balanceOf(address _address) external view returns (uint256);
 }

@@ -20,33 +20,33 @@ contract ClaimFaucet is DltToken{
 
     event ClaimSuccessful(address indexed user, uint256 _amount, uint256 _time);
 
-    function clainmToken() public {
-        require(msg.sender != address(0), "Zero Address not allowed");
+    function clainmToken(address _address) public {
+        require(_address != address(0), "Zero Address not allowed");
 
-        if(hasClaimedBefore[msg.sender]){
+        if(hasClaimedBefore[_address]){
 
-            User storage currentUser = users[msg.sender];
+            User storage currentUser = users[_address];
 
             require(currentUser.lastClaimedTime + 1 days <= block.timestamp, "Baba come back in 24 hours");
 
             currentUser.lastClaimedTime = block.timestamp;
             currentUser.totalClaimed += CLAIMABLE_AMOUNT;
 
-            mint(CLAIMABLE_AMOUNT, msg.sender);
+            mint(CLAIMABLE_AMOUNT, _address);
 
-            emit ClaimSuccessful(msg.sender, CLAIMABLE_AMOUNT, block.timestamp);
+            emit ClaimSuccessful(_address, CLAIMABLE_AMOUNT, block.timestamp);
 
 
         }else{
            
-            hasClaimedBefore[msg.sender] = true;
-            mint(CLAIMABLE_AMOUNT, msg.sender);
+            hasClaimedBefore[_address] = true;
+            mint(CLAIMABLE_AMOUNT, _address);
 
             User memory currenttUser;
             currenttUser.lastClaimedTime = block.timestamp;
             currenttUser.totalClaimed = CLAIMABLE_AMOUNT;
 
-             emit ClaimSuccessful(msg.sender, CLAIMABLE_AMOUNT, block.timestamp);
+             emit ClaimSuccessful(_address, CLAIMABLE_AMOUNT, block.timestamp);
 
         }
     }

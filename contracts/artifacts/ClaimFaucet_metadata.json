@@ -171,7 +171,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
 				"name": "clainmToken",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -299,11 +305,11 @@
 	},
 	"sources": {
 		"contracts/ClaimFaucet.sol": {
-			"keccak256": "0x3128461c6b2b63bd65a24b21e9e7cff558d87c82a18ff692732cd581abf0282d",
+			"keccak256": "0xa5fe940c58aa14d729bab1171a8c850d8cec6a991dba078f1b2bc1f2db460b93",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1a6f9af4d737d8d79aaa37843f6d48cfb22f9ef7fe9802bd8d2e9cc69a4a077f",
-				"dweb:/ipfs/QmUgvbkd1V8FXskxS4h6Xyv84QEmpEsQP5mFxxdvkYziFE"
+				"bzz-raw://39b9562ec7a87ea53d33117bfce7c2471f101ddf32ed4be04b1529e4a65e7332",
+				"dweb:/ipfs/QmRgPmC4JiEqpMXXFpcwFNZGsGqDFo1wEVJ9ds6eYNuecS"
 			]
 		},
 		"contracts/DltToken.sol": {

@@ -6,7 +6,32 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
 				"name": "clainmToken",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -67,11 +92,11 @@
 	},
 	"sources": {
 		"contracts/IERC20.sol": {
-			"keccak256": "0x5b0dcf0b45402cf08e87fca033d70f9b3f0d371d57ac16abffa7be1f199d444a",
+			"keccak256": "0xe4d85dffbef1e5fdc7dec6dff9f56180fd3c240576dfd9c723ba3f8678eebe4d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://58992392dfe2257d4636ff5eca6fb22e535c385ad81f6380d32e8f1e06d3e676",
-				"dweb:/ipfs/QmUM4UUD6HZujZeT8TW3gTZPn67v7CE8BNFETc3j4VyTU9"
+				"bzz-raw://4bacb5bb6b7994e9715c6d0540f1c3a6fcffc595ecbf4008bf22b801fd7d36a3",
+				"dweb:/ipfs/QmUuki32CyotoFYbT6mgsg21ajM4d8aBfTkMvecCTJit1Q"
 			]
 		}
 	},
